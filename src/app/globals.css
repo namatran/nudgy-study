@@ -1,0 +1,208 @@
+/* Design tokens. Values come from docs/DESIGN-REFS.md (measured at 1440). */
+:root {
+  /* color */
+  --paper: #f4f3ef;
+  --paper-raised: #ffffff;
+  --ink: #0b0d12;
+  --ink-soft: #5b5f68;
+  --ink-80: rgb(11 13 18 / 0.8);
+  --ink-75: rgb(11 13 18 / 0.75);
+  --ink-45: rgb(11 13 18 / 0.45);
+  --ink-15: rgb(11 13 18 / 0.15);
+  --ink-06: rgb(11 13 18 / 0.06);
+  --rule: #dad8d1;
+  --open-blue: #2f7fd6;
+  --coral: #c62f35;
+  --sky-top: #2d78cf;
+  --sky-mid: #4f9bdd;
+  --sky-bottom: #93cbea;
+  --on-sky: #ffffff;
+  --on-sky-soft: rgb(255 255 255 / 0.82);
+  --phone-shell: #101114;
+  --mac-lid: #0c0d10;
+  --pill-face-top: #ffffff;
+  --pill-face-bottom: #efebe2;
+  --pill-ledge: #c9c2b3;
+  --dome-inner: #dfe9f3;
+  --dome-outer: #e9eef3;
+  --voice-note: #fff1c2;
+  --waves: #a48dff;
+
+  /* type */
+  --font-hand: var(--font-poor-story), ui-rounded, "SF Pro Rounded", system-ui, sans-serif;
+  --font-body: ui-rounded, "SF Pro Rounded", -apple-system, var(--font-nunito), system-ui, sans-serif;
+  --font-figure: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", system-ui,
+    "Segoe UI", Roboto, sans-serif;
+
+  --fs-h1: 84px;
+  --fs-h2: 56px;
+  --fs-h2-lead: 58px;
+  --fs-h3-feature: 48px;
+  --fs-story: 60px;
+  --fs-manifesto: 70px;
+  --fs-closing: 66px;
+  --fs-card-title: 30px;
+  --fs-card-title-wide: 36px;
+  --fs-eyebrow: 22px;
+  --fs-hand-sub: 23px;
+  --fs-hand-line: 24px;
+  --fs-button: 22px;
+  --fs-lede: 20px;
+  --fs-body: 17px;
+  --fs-body-card: 16px;
+  --fs-fine: 14px;
+  --fs-nav: 14.5px;
+  --lh-tight: 1.02;
+  --lh-heading: 1.05;
+  --lh-body: 1.625;
+
+  /* space & layout */
+  --content-max: 1152px;
+  --content-narrow: 1024px;
+  --content-faq: 768px;
+  --gutter: 24px;
+  --section-pt: 96px;
+  --section-pt-lg: 112px;
+  --section-pb: 32px;
+  --section-pb-lg: 40px;
+  --grid-gap: 48px;
+
+  /* shape & depth */
+  --radius-card: 22px;
+  --radius-pill: 18px;
+  --radius-full: 999px;
+  --shadow-card: inset 0 1px 0 rgb(255 255 255 / 0.8), 0 12px 34px rgb(20 40 80 / 0.08);
+  --shadow-nav: inset 0 1px 0 rgb(255 255 255 / 0.6), 0 10px 30px rgb(0 30 60 / 0.12);
+  --shadow-pill: 0 6px 0 var(--pill-ledge), 0 14px 30px rgb(0 40 80 / 0.25);
+  --shadow-dark-card: 0 18px 40px rgb(10 20 50 / 0.28);
+
+  /* motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-pop: cubic-bezier(0.34, 1.4, 0.64, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-hover: cubic-bezier(0.2, 0, 0, 1);
+  --ease-press: cubic-bezier(0, 0, 0.2, 1);
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --fs-h1: 68px;
+    --fs-manifesto: 60px;
+    --fs-story: 44px;
+  }
+}
+
+@media (max-width: 639px) {
+  :root {
+    --fs-h1: 46px;
+    --fs-h2: 40px;
+    --fs-h2-lead: 40px;
+    --fs-h3-feature: 38px;
+    --fs-story: 38px;
+    --fs-manifesto: 38px;
+    --fs-closing: 44px;
+    --fs-card-title: 26px;
+    --fs-card-title-wide: 30px;
+    --fs-lede: 18px;
+    --gutter: 16px;
+    --section-pt: 64px;
+    --section-pt-lg: 80px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img,
+svg {
+  display: block;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--sky-mid) 35%, transparent);
+}
+
+:focus-visible {
+  outline: 2.5px solid var(--open-blue);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:not(.lenis) {
+    scroll-behavior: smooth;
+  }
+}
