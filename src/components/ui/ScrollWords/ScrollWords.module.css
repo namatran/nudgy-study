@@ -1,0 +1,15 @@
+.word {
+  opacity: 0.14;
+  transition: opacity 0.25s linear;
+}
+
+.soft {
+  color: var(--ink-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .word {
+    opacity: 1 !important;
+    transition: none;
+  }
+}
