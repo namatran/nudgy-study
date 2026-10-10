@@ -30,6 +30,10 @@
   text-shadow: 0 6px 26px rgb(0 40 90 / 0.35);
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .titleMascot {
   display: inline-block;
   margin-left: 0.12em;

@@ -62,8 +62,11 @@ export function Hero() {
 
       <div className={styles.inner}>
         <h1 className={`${styles.title} ${styles.pop}`} style={{ "--delay": "0.05s" } as CSSProperties}>
-          {hero.titleLine1}
-          <Mascot width="0.84em" className={styles.titleMascot} seed={3} />
+          {hero.titleLine1.split(" ").slice(0, -1).join(" ")}{" "}
+          <span className={styles.nowrap}>
+            {hero.titleLine1.split(" ").at(-1)}
+            <Mascot width="0.84em" className={styles.titleMascot} seed={3} />
+          </span>
           <br />
           {hero.titleLine2}
         </h1>
