@@ -1,0 +1,146 @@
+.section {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--section-pt-lg) var(--gutter) var(--section-pb-lg);
+  scroll-margin-top: 64px;
+}
+
+.grid {
+  display: grid;
+  gap: var(--grid-gap);
+  align-items: center;
+}
+
+.copy {
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--font-hand);
+  font-size: var(--fs-eyebrow);
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.title {
+  margin-top: 4px;
+  font-family: var(--font-hand);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-heading);
+}
+
+.body {
+  max-width: 448px;
+  margin: 16px auto 0;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--ink-80);
+}
+
+.cardWrap {
+  width: 100%;
+  max-width: 448px;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 24px 28px;
+}
+
+.label {
+  display: block;
+  font-family: var(--font-hand);
+  font-size: var(--fs-eyebrow);
+  line-height: 1.5;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  min-height: 48px;
+  padding: 0 20px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-full);
+  background: #fff;
+  font-size: var(--fs-body);
+  color: var(--ink);
+}
+
+.input::placeholder {
+  color: var(--ink-soft);
+  opacity: 0.8;
+}
+
+.input:focus-visible {
+  border-radius: var(--radius-full);
+}
+
+.input[aria-invalid="true"] {
+  border-color: var(--coral);
+}
+
+.submit {
+  flex-shrink: 0;
+  padding: 0 24px;
+  font-size: 20px;
+}
+
+.note {
+  margin-top: 12px;
+  font-size: var(--fs-fine);
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.error {
+  color: var(--coral);
+}
+
+.thanks {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  padding: 4px 0;
+}
+
+.thanksTitle {
+  margin-top: 6px;
+  font-family: var(--font-hand);
+  font-size: 30px;
+  line-height: 1.25;
+}
+
+.again {
+  margin-top: 10px;
+  font-size: var(--fs-fine);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1.1fr;
+  }
+  .copy {
+    text-align: left;
+  }
+  .body {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 639px) {
+  .card {
+    padding: 24px 20px;
+  }
+  .row {
+    flex-direction: column;
+  }
+}
