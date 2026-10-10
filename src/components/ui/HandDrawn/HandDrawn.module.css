@@ -6,8 +6,8 @@
 
 .loop {
   position: absolute;
-  inset: -0.2em -0.55em -0.3em -0.6em;
-  width: calc(100% + 1.15em);
+  inset: -0.2em -0.45em -0.3em -0.4em;
+  width: calc(100% + 0.85em);
   height: calc(100% + 0.5em);
   overflow: visible;
   pointer-events: none;
