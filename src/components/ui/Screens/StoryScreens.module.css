@@ -1,0 +1,365 @@
+.screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 4.4em 1.6em 1.6em;
+  gap: 0.7em;
+}
+
+.skyScreen {
+  background: linear-gradient(180deg, #2a6fc4 0%, #3b7fc8 45%, #4f7396 100%);
+  color: #fff;
+}
+
+.paperScreen {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.back {
+  opacity: 0.9;
+}
+.backInk {
+  color: var(--ink);
+}
+.dim {
+  opacity: 0.4;
+}
+
+.bigTitle {
+  font-family: var(--font-figure);
+  font-size: 2.4em;
+  font-weight: 700;
+}
+
+.dateRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-figure);
+  font-size: 1.25em;
+  font-weight: 500;
+}
+
+.handLabel {
+  margin-top: 0.4em;
+  font-family: var(--font-hand);
+  font-size: 1.5em;
+  opacity: 0.85;
+}
+
+.handLabelInk {
+  font-family: var(--font-hand);
+  font-size: 1.8em;
+  color: var(--ink-soft);
+}
+
+.glassItem {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.2em 0.6em;
+  padding: 0.8em 1em;
+  border-radius: 1em;
+  background: rgb(255 255 255 / 0.16);
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.12);
+}
+
+.glassTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.glassTime {
+  font-size: 1em;
+  opacity: 0.85;
+}
+
+.glassQuote {
+  grid-column: 1 / -1;
+  font-family: var(--font-hand);
+  font-size: 1.15em;
+  opacity: 0.8;
+}
+
+.dayList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.6em 0;
+  border-bottom: 1px solid rgb(255 255 255 / 0.18);
+  font-family: var(--font-hand);
+  font-size: 1.7em;
+}
+
+.dayTime {
+  font-family: var(--font-figure);
+  font-size: 0.6em;
+  opacity: 0.85;
+}
+
+.todayFoot {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  font-size: 1.15em;
+  font-weight: 600;
+}
+
+.handSmall {
+  font-family: var(--font-hand);
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+.askBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1.2em;
+  border-radius: 99em;
+  background: rgb(255 255 255 / 0.2);
+  font-size: 1.15em;
+}
+
+/* lock screen */
+.lockScreen {
+  align-items: center;
+  background: linear-gradient(180deg, #1d4f9a 0%, #3c7fcf 50%, #93cbea 100%);
+  color: #fff;
+}
+
+.lockDate {
+  margin-top: 1.4em;
+  font-family: var(--font-figure);
+  font-size: 1.4em;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.lockTime {
+  font-family: var(--font-figure);
+  font-size: 7.2em;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.lockCard {
+  width: 100%;
+  margin-top: 1.6em;
+  padding: 1.2em 1.4em;
+  border-radius: 2em;
+  background: rgb(0 0 0 / 0.82);
+  backdrop-filter: blur(10px);
+}
+
+.lockHead {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  font-family: var(--font-hand);
+  font-size: 1.3em;
+  opacity: 0.75;
+}
+
+.lockQ {
+  margin-top: 0.4em;
+  font-family: var(--font-hand);
+  font-size: 1.9em;
+}
+
+.lockA {
+  font-family: var(--font-hand);
+  font-size: 1.4em;
+  opacity: 0.75;
+}
+
+.lockBtns {
+  display: flex;
+  gap: 0.6em;
+  margin-top: 0.9em;
+}
+
+.lockOpen,
+.lockOk {
+  flex: 1;
+  padding: 0.5em 0;
+  border-radius: 99em;
+  text-align: center;
+  font-family: var(--font-hand);
+  font-size: 1.3em;
+}
+.lockOpen {
+  background: var(--open-blue);
+}
+.lockOk {
+  background: rgb(255 255 255 / 0.14);
+}
+
+.lockDock {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: auto;
+  padding: 0 1em 1em;
+}
+.lockDock span {
+  display: grid;
+  place-items: center;
+  width: 4.4em;
+  height: 4.4em;
+  border-radius: 50%;
+  background: rgb(0 0 0 / 0.3);
+}
+
+/* paper cards */
+.card {
+  padding: 1.1em 1.2em;
+  border-radius: 1.6em;
+  background: #fff;
+  box-shadow: 0 0.2em 1em rgb(20 40 80 / 0.07);
+}
+
+.cardTitle {
+  font-family: var(--font-hand);
+  font-size: 1.7em;
+}
+
+.cardBody {
+  margin-top: 0.3em;
+  font-size: 1.25em;
+  font-weight: 500;
+}
+
+.cardHand {
+  margin-top: 0.3em;
+  font-family: var(--font-hand);
+  font-size: 1.3em;
+  color: var(--ink-soft);
+}
+
+.meta {
+  font-size: 1em;
+  color: var(--ink-soft);
+}
+
+.weather {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+.weatherCol {
+  display: grid;
+  justify-items: center;
+  gap: 0.3em;
+  flex: 1;
+  font-size: 0.95em;
+  color: var(--ink-soft);
+}
+
+.weatherBar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 8em;
+  overflow: hidden;
+  border-radius: 0.5em;
+  background: #eef0f3;
+}
+
+.weatherBar i {
+  display: block;
+}
+
+.legend {
+  display: flex;
+  gap: 1em;
+  margin-top: 0.8em;
+  font-size: 1em;
+  font-weight: 600;
+}
+.legend span {
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
+}
+.legend i {
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+}
+
+.recurring {
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--ink-06);
+}
+.recurring:last-child {
+  border-bottom: 0;
+}
+
+.letgoSky {
+  display: grid;
+  place-items: center;
+  height: 12em;
+  margin: -4.4em -1.6em 0.4em;
+  padding-top: 3.4em;
+  border-radius: 0 0 3em 3em;
+  background: radial-gradient(120% 90% at 50% 60%, #6cb1ec 0%, #3f8ad8 55%, #2f74c8 100%);
+}
+
+.rowBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.6em;
+}
+
+.itemTitle {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+.hint {
+  margin-top: 0.3em;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--open-blue);
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 0.6em;
+  padding: 0.5em 1em;
+  border-radius: 99em;
+  background: rgb(47 127 214 / 0.12);
+  color: var(--open-blue);
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.gone {
+  opacity: 0.45;
+  transform: translateX(14%) rotate(2deg);
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding: 0 0.6em 1em;
+}
+.tabs span {
+  display: grid;
+  justify-items: center;
+  font-family: var(--font-hand);
+  font-size: 1em;
+}
