@@ -1,0 +1,97 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  white-space: nowrap;
+  transition:
+    transform 0.2s var(--ease-press),
+    box-shadow 0.2s var(--ease-press),
+    background-color 0.12s linear,
+    color 0.12s linear;
+}
+
+/* sizes */
+.md {
+  min-height: 48px;
+  padding: 0 28px;
+  font-family: var(--font-hand);
+  font-size: var(--fs-button);
+  line-height: 1.5;
+}
+.sm {
+  padding: 10px 20px;
+  font-family: var(--font-hand);
+  font-size: 18px;
+  line-height: 1.5;
+}
+.nav {
+  padding: 8px 20px;
+  font-size: var(--fs-nav);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* variants */
+.ink {
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: var(--radius-full);
+}
+
+.pill3d {
+  color: var(--ink);
+  background: linear-gradient(var(--pill-face-top), var(--pill-face-bottom));
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-pill);
+}
+.pill3d:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 var(--pill-ledge), 0 8px 18px rgb(0 40 80 / 0.2);
+}
+
+.ghost,
+.outline {
+  padding: 0 24px;
+  border-radius: var(--radius-pill);
+  transition:
+    background-color 0.2s var(--ease-hover),
+    box-shadow 0.2s var(--ease-hover),
+    transform 0.2s var(--ease-hover);
+}
+.ghost {
+  color: var(--on-sky);
+  background: rgb(255 255 255 / 0.15);
+  box-shadow: 0 0 0 1px rgb(255 255 255 / 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.outline {
+  color: var(--ink);
+  background: #fff;
+  box-shadow: 0 0 0 1px var(--ink-15);
+}
+
+@media (hover: hover) {
+  .ink:hover,
+  .pill3d:hover {
+    transform: translateY(-1px) scale(1.02);
+  }
+  .ghost:hover {
+    background: rgb(255 255 255 / 0.25);
+    transform: translateY(-1px);
+  }
+  .outline:hover {
+    transform: translateY(-1px);
+  }
+}
+
+.ink:active {
+  transform: translateY(2px) scale(0.99);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}
