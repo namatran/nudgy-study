@@ -1,0 +1,74 @@
+.section {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--section-pt) var(--gutter) var(--section-pb);
+}
+
+.grid {
+  display: grid;
+  gap: var(--grid-gap);
+  align-items: center;
+}
+
+.copy {
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--font-hand);
+  font-size: var(--fs-eyebrow);
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.title {
+  margin-top: 4px;
+  font-family: var(--font-hand);
+  font-size: var(--fs-h3-feature);
+  line-height: var(--lh-heading);
+}
+
+.line {
+  margin-top: 24px;
+  font-family: var(--font-hand);
+  font-size: var(--fs-hand-line);
+  line-height: 1.5;
+}
+
+.demo {
+  width: 100%;
+  max-width: 384px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.chip {
+  padding: 8px 16px;
+  border: 1px solid var(--ink-06);
+  border-radius: var(--radius-card);
+  background: var(--paper-raised);
+  box-shadow: var(--shadow-card);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.arrow {
+  margin: 10px auto 4px;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .copy {
+    text-align: left;
+  }
+}
