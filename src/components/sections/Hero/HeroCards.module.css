@@ -1,0 +1,219 @@
+/* Card stage sits over the phone; sizes use container units like the original (406px wide). */
+.stage {
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  width: min(406px, calc(100vw - 24px));
+  margin-left: calc(min(406px, calc(100vw - 24px)) / -2);
+  container-type: inline-size;
+  z-index: 3;
+}
+
+.card {
+  position: absolute;
+  inset: 0 0 auto;
+  transform: rotate(var(--tilt, 0deg));
+  transform-origin: 50% 60%;
+}
+
+.arrive {
+  animation: arrive 0.75s var(--ease-spring) both;
+}
+
+.leave {
+  animation: leave 0.6s var(--ease-soft) both;
+}
+
+@keyframes arrive {
+  0% {
+    opacity: 0;
+    transform: var(--from);
+    filter: blur(6px);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(var(--tilt, 0deg));
+    filter: blur(0);
+  }
+}
+
+@keyframes leave {
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 38px, 0) rotate(calc(var(--tilt, 0deg) * -1.4)) scale(0.92);
+    filter: blur(8px);
+  }
+}
+
+.shell {
+  position: relative;
+  overflow: hidden;
+  padding: 4cqw 5cqw 4.4cqw;
+  border-radius: 6.4cqw;
+  background: #000;
+  color: #fff;
+  text-align: left;
+  box-shadow:
+    0 2.6cqw 6cqw rgb(0 15 45 / 0.38),
+    inset 0 0 0 1px rgb(255 255 255 / 0.06);
+}
+
+/* faint star specks */
+.shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1px 1px at 14% 26%, rgb(255 255 255 / 0.5), transparent 60%),
+    radial-gradient(1px 1px at 37% 74%, rgb(255 255 255 / 0.3), transparent 60%),
+    radial-gradient(1px 1px at 58% 16%, rgb(255 255 255 / 0.4), transparent 60%),
+    radial-gradient(1px 1px at 72% 60%, rgb(255 255 255 / 0.3), transparent 60%),
+    radial-gradient(1px 1px at 88% 34%, rgb(255 255 255 / 0.45), transparent 60%),
+    radial-gradient(1px 1px at 94% 84%, rgb(255 255 255 / 0.3), transparent 60%);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 2cqw;
+  font-family: var(--font-hand);
+  font-size: 3.8cqw;
+  line-height: 1.3;
+  color: rgb(255 255 255 / 0.72);
+}
+
+.title {
+  margin-top: 1.6cqw;
+  font-family: var(--font-hand);
+  font-size: 6cqw;
+  line-height: 1.12;
+}
+
+.detail {
+  margin-top: 1cqw;
+  min-height: 1.3em;
+  font-family: var(--font-hand);
+  font-size: 4cqw;
+  line-height: 1.3;
+  color: rgb(255 255 255 / 0.72);
+}
+
+.actions {
+  display: flex;
+  gap: 2.4cqw;
+  margin-top: 3.2cqw;
+}
+
+.btnBlue,
+.btnDark {
+  flex: 1;
+  padding: 1.8cqw 0;
+  border-radius: 999px;
+  font-family: var(--font-hand);
+  font-size: 4.2cqw;
+  text-align: center;
+}
+
+.btnBlue {
+  background: var(--open-blue);
+}
+
+.btnDark {
+  background: rgb(255 255 255 / 0.12);
+}
+
+.listen {
+  display: flex;
+  align-items: center;
+  gap: 2.4cqw;
+}
+
+.listen .title {
+  margin-top: 0;
+  color: var(--waves);
+}
+
+.waves {
+  font-family: var(--font-hand);
+  font-size: 4cqw;
+  color: var(--waves);
+  animation: waves 1.2s ease-in-out infinite;
+}
+
+.doneLabel {
+  color: #7be08f;
+}
+
+.swap {
+  animation: swap 0.45s var(--ease-soft) both;
+}
+
+@keyframes swap {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(1.4cqw);
+  }
+}
+
+@keyframes waves {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.dots i {
+  display: inline-block;
+  font-style: normal;
+  animation: dot 1.05s var(--ease-soft) infinite;
+}
+.dots i:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.dots i:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes dot {
+  0%,
+  60%,
+  100% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-1.4cqw);
+  }
+}
+
+.caret {
+  display: inline-block;
+  width: 0.5cqw;
+  height: 1em;
+  margin-left: 0.3cqw;
+  vertical-align: -0.12em;
+  background: rgb(255 255 255 / 0.8);
+  animation: caret 0.9s step-end infinite;
+}
+
+@keyframes caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card * {
+    animation: none !important;
+  }
+}

@@ -75,7 +75,7 @@ export const hero = {
       yes: "sure",
       no: "later",
     },
-  ],
+  ] as const,
 };
 
 export const what = {
