@@ -1,0 +1,42 @@
+.circled {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.loop {
+  position: absolute;
+  inset: -0.2em -0.55em -0.3em -0.6em;
+  width: calc(100% + 1.15em);
+  height: calc(100% + 0.5em);
+  overflow: visible;
+  pointer-events: none;
+}
+
+.loop,
+.arrow {
+  clip-path: inset(-40% 100% -40% -40%);
+  transition: clip-path 0.9s var(--ease-soft) var(--delay, 0s);
+}
+
+[data-shown] > .loop,
+[data-shown] > .arrow {
+  clip-path: inset(-40%);
+}
+
+.arrowWrap {
+  display: inline-block;
+  color: var(--ink-soft);
+}
+
+.arrow {
+  clip-path: inset(-40% -40% 100% -40%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loop,
+  .arrow {
+    clip-path: none;
+    transition: none;
+  }
+}
