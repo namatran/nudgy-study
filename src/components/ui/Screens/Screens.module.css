@@ -1,0 +1,164 @@
+/* Mock app screens. Sizes are in em so they scale with the phone (1em = 10px at 300px wide). */
+
+.home {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.homeSky {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5.2em 2em 2em;
+  border-radius: 0 0 3.2em 3.2em;
+  background: radial-gradient(120% 90% at 50% 60%, #6cb1ec 0%, #3f8ad8 55%, #2f74c8 100%);
+  color: #fff;
+  box-shadow: 0 1em 2.4em rgb(0 40 100 / 0.18);
+}
+
+.homeTop {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0.9;
+}
+
+.homeDate {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  font-family: var(--font-hand);
+  font-size: 1.4em;
+}
+
+.rings {
+  display: flex;
+  gap: 0.6em;
+  margin-top: 1.6em;
+}
+
+.ring {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 7.6em;
+}
+
+.ring svg {
+  width: 7.6em;
+  height: 7.6em;
+}
+
+.ringValue {
+  position: absolute;
+  top: 0;
+  display: grid;
+  place-items: center;
+  height: 3.8em;
+  font-family: var(--font-figure);
+  font-size: 2em;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+
+.ringLabel {
+  font-family: var(--font-figure);
+  font-size: 0.95em;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.homeStatus {
+  margin-top: 1em;
+  font-family: var(--font-hand);
+  font-size: 2.2em;
+}
+
+.homeStatusSub {
+  font-family: var(--font-figure);
+  font-size: 1.1em;
+  opacity: 0.75;
+}
+
+.homePause {
+  margin-top: 1em;
+  padding: 0.6em 1.6em;
+  border-radius: 99em;
+  background: rgb(255 255 255 / 0.18);
+  font-family: var(--font-hand);
+  font-size: 1.3em;
+}
+
+.homeAsk {
+  width: 100%;
+  margin-top: 1.4em;
+  padding: 0.7em 0;
+  border-radius: 99em;
+  background: #fff;
+  color: var(--ink);
+  text-align: center;
+  font-family: var(--font-hand);
+  font-size: 1.4em;
+}
+
+.homeListTitle {
+  margin: 1.4em 1.8em 0.6em;
+  font-family: var(--font-hand);
+  font-size: 1.6em;
+  color: var(--ink-soft);
+}
+
+.homeList {
+  display: grid;
+  gap: 0.6em;
+  padding: 0 1.6em;
+}
+
+.homeList li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.2em 0.6em;
+  padding: 0.9em 1em;
+  border-radius: 1.2em;
+  background: #fff;
+  box-shadow: 0 0.2em 0.8em rgb(20 40 80 / 0.06);
+}
+
+.homeItemTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.homeItemTime {
+  font-size: 0.95em;
+  color: var(--ink-soft);
+}
+
+.homeItemBody {
+  grid-column: 1 / -1;
+  font-family: var(--font-hand);
+  font-size: 1.15em;
+  color: var(--ink-soft);
+}
+
+.homeTabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding: 0 2.2em 2.6em;
+}
+
+.homeTabs span {
+  display: grid;
+  justify-items: center;
+  gap: 0.2em;
+  font-family: var(--font-hand);
+  font-size: 1em;
+}
