@@ -1,0 +1,8 @@
+{
+  "name": "nudgy-study",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}
