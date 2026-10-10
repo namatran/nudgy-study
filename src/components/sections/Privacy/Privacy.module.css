@@ -1,0 +1,167 @@
+.section {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--section-pt-lg) var(--gutter) var(--section-pb);
+  scroll-margin-top: 64px;
+}
+
+.head {
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--font-hand);
+  font-size: var(--fs-eyebrow);
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.title {
+  margin-top: 4px;
+  font-family: var(--font-hand);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-heading);
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.grid > * {
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  height: 100%;
+  padding: 32px;
+}
+
+.icon {
+  flex-shrink: 0;
+  margin-top: -6px;
+}
+
+.cardTitle {
+  font-family: var(--font-hand);
+  font-size: var(--fs-card-title);
+  line-height: 1.25;
+}
+
+.cardBody {
+  margin-top: 8px;
+  font-size: var(--fs-body-card);
+  line-height: var(--lh-body);
+  color: var(--ink-80);
+}
+
+.wideWrap {
+  margin-top: 16px;
+}
+
+.wide {
+  display: grid;
+  gap: 32px;
+  padding: 32px;
+}
+
+.wideCopy {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.wideEyebrow {
+  font-family: var(--font-hand);
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.wideTitle {
+  font-family: var(--font-hand);
+  font-size: var(--fs-card-title-wide);
+  line-height: 1.25;
+}
+
+.demo {
+  max-width: 448px;
+}
+
+.demoLabel {
+  font-family: var(--font-hand);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.demoQuote,
+.demoKept {
+  margin-top: 4px;
+  font-size: var(--fs-body);
+  line-height: 1.375;
+  color: var(--ink-80);
+}
+
+.demoKept {
+  color: var(--ink);
+}
+
+.token {
+  padding: 1px 6px;
+  border-radius: 6px;
+  background: rgb(198 47 53 / 0.1);
+  color: var(--coral);
+  font-weight: 600;
+}
+
+.demoArrow {
+  margin: 6px 0 2px 28px;
+}
+
+.demoLine {
+  margin-top: 20px;
+  font-family: var(--font-hand);
+  font-size: var(--fs-hand-line);
+  line-height: 1.375;
+}
+
+.fine {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.fineLink {
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wide {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 639px) {
+  .card,
+  .wide {
+    padding: 24px;
+  }
+}
