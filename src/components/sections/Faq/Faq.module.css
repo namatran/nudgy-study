@@ -1,0 +1,42 @@
+.section {
+  max-width: var(--content-faq);
+  margin: 0 auto;
+  padding: var(--section-pt-lg) 16px var(--section-pb-lg);
+  scroll-margin-top: 64px;
+}
+
+.head {
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--font-hand);
+  font-size: var(--fs-eyebrow);
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.title {
+  margin-top: 4px;
+  font-family: var(--font-hand);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-heading);
+}
+
+.list {
+  margin-top: 32px;
+}
+
+.more {
+  margin-top: 28px;
+  text-align: center;
+  font-size: var(--fs-body-card);
+  line-height: var(--lh-body);
+  color: var(--ink-80);
+}
+
+.moreLink {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
